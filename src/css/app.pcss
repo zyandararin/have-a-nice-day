@@ -1,0 +1,61 @@
+@import "./sections/detail.pcss";
+@import "./sections/footer.pcss";
+@import "./sections/hero.pcss";
+@import "./sections/lead.pcss";
+@import "./sections/loading.pcss";
+@import "./sections/staff.pcss";
+@import "./variables/color.pcss";
+@import "./variables/font.pcss";
+
+html,
+body {
+  font-family: var(--default-font-family);
+  height: 100%;
+  color: #333;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 200ms ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.1rem;
+  z-index: 10;
+
+  &[data-is-loading="pending"] {
+    display: none;
+    overflow: hidden;
+  }
+
+  &[data-is-loading="done"] {
+    overflow: hidden;
+  }
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

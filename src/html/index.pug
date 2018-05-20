@@ -1,0 +1,34 @@
+doctype html
+html(lang="ja", prefix="og: http://ogp.me/ns#")
+  head
+    meta(charset="utf8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="keywords" content="Have a Nice Day!,古明地こんぷれっくす,こめこん,古明地こいし,同人誌,東方Project,東方,山瀬れの,じゃんだらりん。")
+    meta(name="description" content="Have a Nice Day! | じゃんだらりん。 | 古明地こんぷれっくす『古-03』")
+    meta(property="og:title" content="Have a Nice Day!")
+    meta(property="og:description" content="Have a Nice Day! | じゃんだらりん。 | 古明地こんぷれっくす『古-03』")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://zyandararin.github.io/have-a-nice-day/")
+    meta(property="og:image" content="https://zyandararin.github.io/have-a-nice-day/images/ogp.png")
+    meta(property="og:site_name" content="じゃんだらりん。")
+    meta(property="twitter:card" content="summary_large_image")
+    title Have a Nice Day! | じゃんだらりん。
+    script(
+      src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js",
+      async="async",
+      defer="defer"
+    )
+    script(src="//webfont.fontplus.jp/accessor/script/fontplus.js?0lZ5mZy2MdQ%3D&box=dVvSYikSc9g%3D&aa=1")
+  body
+    main#container.container(data-is-loading="pending")
+      include sections/hero.pug
+      include sections/lead.pug
+      include sections/staff.pug
+      include sections/detail.pug
+      include sections/footer.pug
+    #loading(data-is-loading="pending")
+      .load--spinner
+        .spinner.sk-spinner.sk-spinner-pulse
+      .load.load--top
+      .load.load--bottom
+    #particles.bg

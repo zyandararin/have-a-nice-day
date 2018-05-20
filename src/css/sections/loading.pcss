@@ -1,0 +1,64 @@
+#loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  .load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .load--spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    z-index: 100;
+
+    .spinner {
+      background-color: #fff;
+    }
+  }
+
+  .load--top {
+    background-color: var(--primary-color);
+    transform: translateY(0);
+    transition: transform 1s ease-out;
+    z-index: 10;
+  }
+
+  .load--bottom {
+    background-color: var(--secondary-color);
+    transform: translateX(0);
+    transition: transform 1s ease-out 1s;
+    z-index: 1;
+  }
+
+  &[data-is-loading="done"] {
+    .load--spinner {
+      opacity: 0;
+    }
+
+    .load--top {
+      transform: translateY(100%);
+    }
+
+    .load--bottom {
+      transform: translateX(100%);
+    }
+  }
+
+  &[data-is-loading="ended"] {
+    display: none;
+    z-index: 1;
+  }
+}
