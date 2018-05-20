@@ -1,6 +1,11 @@
-mixin author(name, url)
+mixin author(name, twitterUrl, pixivUrl)
   li
     span= name
-    if url
-      a(href=url)
-        | [ Twitter ]
+    if twitterUrl || pixivUrl
+      div.urls
+        if twitterUrl
+          a(href=twitterUrl)
+            | [ Twitter ]
+        if pixivUrl
+          a(href=pixivUrl)
+            | [ pixiv ]
