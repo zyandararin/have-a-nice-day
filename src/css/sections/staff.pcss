@@ -1,5 +1,5 @@
-@import "../variables/color.pcss";
-@import "../variables/font.pcss";
+@import '../variables/color.pcss';
+@import '../variables/font.pcss';
 
 .staff {
   display: flex;
@@ -52,8 +52,16 @@
       justify-content: space-between;
       line-height: 1.75;
 
-      a:last-of-type {
+      span:last-of-type {
         padding-left: 7px;
+      }
+
+      a {
+        transition: background-color 200ms ease-out;
+
+        &:hover {
+          background-color: var(--secondary-color);
+        }
       }
     }
   }

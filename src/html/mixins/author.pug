@@ -4,8 +4,10 @@ mixin author(name, twitterUrl, pixivUrl)
     if twitterUrl || pixivUrl
       div.urls
         if twitterUrl
-          a(href=twitterUrl)
-            | [ Twitter ]
+          span.url
+            a(href=twitterUrl)
+              | [ Twitter ]
         if pixivUrl
-          a(href=pixivUrl)
-            | [ pixiv ]
+          span.url
+            a(href=pixivUrl)
+              | [ pixiv ]
