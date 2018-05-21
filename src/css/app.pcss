@@ -5,6 +5,7 @@
 @import "./sections/loading.pcss";
 @import "./sections/staff.pcss";
 @import "./variables/color.pcss";
+@import "./variables/customMedia.pcss";
 @import "./variables/font.pcss";
 
 html,
@@ -40,6 +41,10 @@ main {
 
   &[data-is-loading="done"] {
     overflow: hidden;
+  }
+
+  @media (--sp-viewport) {
+    font-size: 1rem;
   }
 }
 
